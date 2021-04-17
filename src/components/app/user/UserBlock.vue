@@ -31,7 +31,7 @@
                   </v-list-item-icon>
                   <v-list-item-content>
                      <router-link :to="item.to" tag="span">
-                        <v-list-item-title v-text="item.text"></v-list-item-title>
+                        <v-list-item-title v-text="$t(item.token)"></v-list-item-title>
                      </router-link>
                   </v-list-item-content>
                </v-list-item>
@@ -50,9 +50,9 @@ export default {
    data() {
       return {
          items: [
-            {text: 'Settings', icon: 'mdi-folder', to: '/settings'},
-            {text: 'Statistic', icon: 'mdi-account-multiple', to: '/stat'},
-            {text: 'Log out', icon: 'mdi-star', to: '/logout'}
+            {token: 'settings', icon: 'mdi-folder', to: '/settings'},
+            {token: 'statistic', icon: 'mdi-account-multiple', to: '/stat'},
+            {token: 'logout', icon: 'mdi-star', to: '/logout'}
          ],
       }
    },
