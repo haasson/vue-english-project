@@ -1,8 +1,11 @@
 {
   "glossary": "Glossary",
+  "login-with-google": "Log in with Google",
   "logout": "Log out",
   "settings" : "Settings",
   "statistic" : "Statistic",
   "switch-language": "Switch language (Russian/English)",
-  "use-dark-theme": "Use dark theme"
+  "use-dark-theme": "Use dark theme",
+  "welcome-title": "Welcome to English App!",
+  "welcome-text": "Please, sign in using your corporate Google account"
 }

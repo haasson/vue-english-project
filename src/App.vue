@@ -1,34 +1,26 @@
 <template>
-   <v-theme-provider root>
-      <vApp>
-         <Navbar/>
-         <v-main>
-            <v-container>
-               <v-row align="center">
-                  <v-col class="d-flex" cols="5">
-
-                     <router-view/>
-                  </v-col>
-               </v-row>
-            </v-container>
-         </v-main>
-      </vApp>
-   </v-theme-provider>
+   <vApp>
+      <component :is="layout">
+         <router-view/>
+      </component>
+   </vApp>
 </template>
 
 <script>
-
-import Navbar from "@/components/app/Navbar";
+import EmptyLayout from '@/layouts/EmptyLayout'
+import MainLayout from '@/layouts/MainLayout'
 
 export default {
    name: 'App',
-
-   components: {
-      Navbar
-   },
+   components: {EmptyLayout, MainLayout},
 
    data: () => ({
       //
    }),
+   computed: {
+      layout() {
+         return this.$route.meta.layout === "empty" ? "empty-layout" : "main-layout"
+      }
+   }
 };
 </script>
